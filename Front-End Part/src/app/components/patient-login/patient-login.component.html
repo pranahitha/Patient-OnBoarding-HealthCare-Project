@@ -1,0 +1,95 @@
+<div><img class="logo" alt="Healthcare-Logo" src="./assets/Healthcare_Logo_Short.png" width="190" />
+    <h1>HEALTHCARE</h1>
+</div>
+<br>
+<div>
+    <div class="navigation-bar">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="navtext">Home</a>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+                <p>Login</p>
+                <ul class="no-bullets">
+                    <li class="loginList"><a href="patient-login" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a href="doctor-login" class="loginhover"> As Doctor </a></li>
+                </ul>
+            </li>
+        </ul>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+                <p>Signup</p>
+                <ul class="no-bullets">
+                    <li class="loginList"><a (click)="addPatient()" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a (click)="addDoctor()" class="loginhover"> As Doctor </a></li>
+                </ul>
+            </li>
+        </ul>
+
+        &nbsp;&emsp;&nbsp;
+        <a href="#services" class="navtext">Service</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="#about" class="navtext">About</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="#contact" class="navtext">Contact</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="https://www.cowin.gov.in/" target="_blank"><button class="vaccine">Click Here for
+                Vaccination</button></a>
+    </div>
+</div>
+<br>
+<h2 class="welcomeh2">Patient Login Form</h2>
+<p style="color: #f34f4e; text-align: center; font-weight: bold; font-size: 20px; font-style: Arial;">{{errorMessage}}</p>
+<br>
+
+<div class="container">
+    <form [formGroup]="patientLoginForm" (ngSubmit)="validatePatient()">
+        <fieldset>
+            <div class="form-group row">
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label for="patientId">Patient Id </label>
+                        <input type="number" class="form-control" formControlName="patientId" name="patientId"
+                            id="patientId">
+                        <div class="alert alert-danger"
+                            *ngIf="patientLoginForm.get('patientId').hasError('required') && patientLoginForm.get('patientId').dirty">
+                            Only Numeric Patient Id is required.
+                        </div>
+                    </div>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label for="password">Patient Password</label>
+                        <input type="password" class="form-control" formControlName="patientPassword" name="password"
+                            id="password">
+                        <div class="alert alert-danger"
+                            *ngIf="patientLoginForm.get('patientPassword').hasError('required') && patientLoginForm.get('patientPassword').dirty">
+                            Only Alphabetic Password of atleast 8 characters is required.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+        <div class="form-group row">
+        <div class="form-group col-md-5 col-mb-6"></div>
+        <div class="form-group col-md-5 buttons" align=center>
+        <button type="submit" class="btn-lg btn-success" [disabled]="patientLoginForm.invalid">Login</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn-lg btn-info">Clear</button>
+        </div>
+    </div>
+    </form>
+</div>
+
+
+
+<footer class="copyfooter">&copy; 2021 Healthcare | All Rights Reserved</footer>

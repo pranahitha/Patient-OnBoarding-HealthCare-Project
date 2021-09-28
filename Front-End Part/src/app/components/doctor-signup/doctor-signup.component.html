@@ -1,0 +1,135 @@
+<div><img class="logo" alt="Healthcare-Logo" src="./assets/Healthcare_Logo_Short.png" width="190" />
+    <h1>HEALTHCARE</h1>
+</div>
+<br>
+<div>
+    <div class="navigation-bar">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="navtext">Home</a>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+                <p>Login</p>
+                <ul class="no-bullets">
+                    <li class="loginList"><a href="patient-login" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a href="doctor-login" class="loginhover"> As Doctor </a></li>
+                </ul>
+            </li>
+        </ul>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+                <p>Signup</p>
+                <ul class="no-bullets">
+                    <li class="loginList"><a (click)="addPatient()" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a (click)="addDoctor()" class="loginhover"> As Doctor </a></li>
+                </ul>
+            </li>
+        </ul>
+
+        &nbsp;&emsp;&nbsp;
+        <a href="#services" class="navtext">Service</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="#about" class="navtext">About</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="#contact" class="navtext">Contact</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="https://www.cowin.gov.in/" target="_blank"><button class="vaccine">Click Here for
+                Vaccination</button></a>
+
+    </div>
+</div>
+<br />
+<h2 class="welcomeh2">Doctor Registration</h2>
+<br>
+<div class="container">
+    <form [formGroup]="doctorForm" (ngSubmit)="saveDoctor()">
+        <fieldset>
+            <div class="form-group row">
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label for="doctorId">Doctor Id </label>
+                        <input type="number" class="form-control" name="doctorId" id="doctorId"
+                            formControlName="doctorId" [readonly]="doctorId!=-1 ? true :false">
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorId').hasError('required') && doctorForm.get('doctorId').dirty">
+                            Doctor Id is required
+                        </div>
+
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorId').hasError('min') && doctorForm.get('doctorId').dirty">
+                            Doctor Id is invalid.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label>Doctor Name</label>
+                        <input type="text" class="form-control" formControlName="doctorName">
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorName').hasError('required') && doctorForm.get('doctorName').dirty">
+                            Doctor Name is required
+                        </div>
+
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorName').hasError('minlength') && doctorForm.get('doctorName').dirty">
+                            Minimum 5 Characters required
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label>Doctor Specialisation</label>
+                        <input type="text" class="form-control" formControlName="doctorSpecialisation">
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorSpecialisation').hasError('required') && doctorForm.get('doctorSpecialisation').dirty">
+                            Doctor Specialisation is required
+                        </div>
+
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorSpecialisation').hasError('minlength') && doctorForm.get('doctorSpecialisation').dirty">
+                            Minimum 3 Characters required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label>Doctor Password</label>
+                        <input type="password" class="form-control" formControlName="doctorPassword">
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorPassword').hasError('required') && doctorForm.get('doctorPassword').dirty">
+                            Doctor Password is required
+                        </div>
+
+                        <div class="alert alert-danger"
+                            *ngIf="doctorForm.get('doctorPassword').hasError('minlength') && doctorForm.get('doctorPassword').dirty">
+                            5 Characters must be needed.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </fieldset>
+        <div class="form-group row">
+            <div class="form-group col-md-5 col-mb-6"></div>
+            <div class="form-group col-md-5 buttons" align=center>
+                <button type="submit" class="btn-lg btn-success" [disabled]="doctorForm.invalid">Add Doctor</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="reset" class="btn-lg btn-info">Clear</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer class="copyfooter">&copy; 2021 Healthcare | All Rights Reserved</footer>

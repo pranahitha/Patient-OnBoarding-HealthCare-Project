@@ -1,0 +1,230 @@
+* {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navigation-bar {
+	text-align: justify;
+	background-color: #ff9696;
+	font-size: 20px;
+	font-family: "Arial";
+	 position: relative;
+	margin-top:50px; 
+	color: #2a2f3d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navigation-bar a {
+    padding: 15px;
+}
+
+.navtext {
+	color: #2a2f3d;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.navtext:hover {
+    background: #03989e;
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.loginhover {
+    color: #2a2f3d;
+}
+
+.loginhover:hover {
+    background: #03989e;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* .sub-menu-1 ul {
+	display : none;
+}
+
+.sub-menu-1 ul:hover
+{
+	display : block;
+	position : absolute;
+	margin-left : -15px;
+}
+
+.sub-menu-1:hover
+{
+	display : block;
+	margin : 15px;	
+} */
+
+.no-bullets{
+    list-style-type: none;
+}
+.no-bullets {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .no-bullets li {display: inline-block; list-style-type: none;}
+  .no-bullets li:hover {background: #ff9696; list-style-type: none;}
+  .no-bullets li:hover .no-bullets {display: block; list-style-type: none;}
+  .no-bullets li .no-bullets {
+    position: absolute;
+    width: 180px;
+    display: none;
+    list-style-type: none;
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
+  }
+
+  .no-bullets li .no-bullets li { 
+    background: #ff9696; 
+    display: block; 
+    list-style-type: none;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+  }
+  .no-bullets li .no-bullets li a {display:block !important; list-style-type: none;} 
+  .no-bullets li .no-bullets li:hover {
+      background: #ff9696; 
+      list-style-type: none;
+      /* padding-top: 20px;
+      padding-bottom: 20px; */
+    }
+
+    /* .loginList {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .loginList:hover {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    } */
+
+h1 {
+	color: #03989e;
+	font-size: 80px;
+	font-family: "Arial";
+	position: relative;
+	right: 50px;
+	top: 20px;
+    text-align: center;
+    text-decoration: #ff9696 underline overline;
+} 
+
+.logo {
+     float: left; 
+     margin-top: 10px;
+     margin-left: 40px;
+    padding: 0 50px 20px 0;
+}
+
+.section-padding{
+    padding: 60px 0px;
+  
+  }
+
+
+.sections {
+    float: left;
+    text-align: left;
+}
+
+.welcomeh2, .welcomeservice h2 {
+    font-family: 'Arial';
+    color: #03989e;
+}
+
+.welcomeh2 {
+    /* color: #03989e; */
+    font-family: 'Arial Black';
+    text-align: center;
+}
+
+.welcomeservice p, .welcomeservice ul {
+    text-align: justify;
+}
+
+.ourServices {
+    list-style: none;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.ourServices a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.ourServices a:hover {
+    background: #03989e;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ourServices li::before {
+    content: "\2022";
+    color: #ff5757;
+    font-weight: bold; 
+    font-size: 25px;
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
+}
+
+.vaccine {
+    font-size: 20px;
+    font-family: Arial;
+    margin-right: 12px;
+    text-align: right;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: #03989e underline ;
+    background:#03989e;
+}
+
+.vaccine:hover {
+    /* background: ; */
+    color: #c9e265;
+}
+.userpassword {
+	font-family: "Lucida calligraphy";
+	color: #ffbd59;
+	font-size: 20px;
+}
+
+/* .loginstyle {
+    text-align: center;
+} */
+
+.copyfooter {
+
+    text-align: center;
+    background-color: #ff9696;
+    font-size: 20px;
+    color: #000;
+    font-family: Arial;
+    /* font-weight: bold; */
+    position: relative;
+    top: 30px;
+
+
+}
+.appointment-card{
+    text-align: center;
+    background-color: #2a2f3d;
+    border-radius: 20px;
+    color: beige;
+    width: 330px;
+    height: 50vh;
+    margin: 10px;
+    padding: 20px;
+    margin-left: 30px;
+}

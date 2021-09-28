@@ -1,0 +1,56 @@
+
+<div><img class="logo" alt="Healthcare-Logo" src="./assets/Healthcare_Logo_Short.png" width="190" />
+    <h1>HEALTHCARE</h1>
+</div>
+<br>
+<div>
+    <div class="navigation-bar">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="doctor-dashboard" class="navtext">Home</a>&nbsp;&emsp;&nbsp;
+        
+        <a href="view-appiontment" class="navtext">View Appointment</a> &nbsp;&emsp;&nbsp;
+        <a href="patient-history" class="navtext">View Patient</a>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="navtext">Logout</a>&emsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.cowin.gov.in/" target="_blank"><button class="vaccine" >Click Here for Vaccination</button></a>
+        
+        
+        </div>
+</div>
+
+
+<br>
+
+<h2 class="welcomeh2">Patient Details</h2>
+<br>
+<div style="text-align: center;display: block;">
+    <table  cellspacing="10" cellpadding="10" class="table table-bordered">
+        
+         <thead style="background-color: #03989e; color: #ffffff;">   
+        <tr>
+            
+        <th>Patient Name </th>
+        <th>Patient Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Patient Contact</th>
+        <th>Gaurdian Name</th>
+        <th>Gaurdian Contact</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let patient of patients">
+    <td class="">{{patient.patientName}}</td>
+    <td class="table-primary">{{patient.patientAge}}</td>
+    <td class="table-success">{{patient.patientGender}}</td>
+    <td class="table-warning">{{patient.patientAddress}}</td>
+    <td class="table-danger">{{patient.patientContact}}</td>
+    <td class="table-info">{{patient.patientGaurdian}}</td>
+    <td class="table-active">{{patient.gaurdianContact}}</td>
+   
+    </tr>
+    </tbody>
+
+
+</table>
+</div>
+

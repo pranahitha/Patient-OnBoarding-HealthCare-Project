@@ -1,0 +1,91 @@
+<div><img class="logo" alt="Healthcare-Logo" src="./assets/Healthcare_Logo_Short.png" width="190" />
+    <h1>HEALTHCARE</h1>
+</div>
+<br>
+<div>
+    <div class="navigation-bar">
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="navtext">Home</a>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+        <p>Login</p>
+            <ul class="no-bullets">
+                    <li class="loginList"><a href="patient-login" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a href="doctor-login" class="loginhover"> As Doctor </a></li>
+            </ul>
+        </li>
+        </ul>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+        <li>
+            <p>Signup</p>
+        <ul class="no-bullets">
+            <li class="loginList"><a  (click)="addPatient()" class="loginhover"> As Patient </a></li>
+            <li class="loginList"><a  (click)="addDoctor()" class="loginhover"> As Doctor </a></li>
+        </ul>
+        </li>
+        </ul>
+            
+        &nbsp;&emsp;&nbsp;
+        <a href="about-app" class="navtext">About App</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="about" class="navtext">About Us</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="contact" class="navtext">Contact Us</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="https://www.cowin.gov.in/" target="_blank"><button class="vaccine" >Click Here for Vaccination</button></a>
+      </div>
+</div>
+
+<section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">Contact us</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Contact Info</h3>
+          <div class="space"></div>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>DehraDun,Uttarakhand<br> India, 248001</p>
+          <div class="space"></div>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@healthcare.com</p>
+          <div class="space"></div>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 600 123 1234</p>
+        </div>
+        <div class="col-md-8 col-sm-8 marb20">
+          <div class="contact-info">
+            <h3 class="cnt-ttl">Having Any Query! Shoot us a message.</h3>
+            <div class="space"></div>
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+
+              <div class="form-action">
+                <button type="submit" class="btn btn-form">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="copyfooter">&copy; 2021 Healthcare | All Rights Reserved</footer>

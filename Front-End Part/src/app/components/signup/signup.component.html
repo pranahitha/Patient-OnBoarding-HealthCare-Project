@@ -1,0 +1,236 @@
+<div><img class="logo" alt="Healthcare-Logo" src="./assets/Healthcare_Logo_Short.png" width="190" />
+    <h1>HEALTHCARE</h1>
+</div>
+<br>
+<div>
+    <div class="navigation-bar">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="navtext">Home</a>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+                <p>Login</p>
+                <ul class="no-bullets">
+                    <li class="loginList"><a href="patient-login" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a href="doctor-login" class="loginhover"> As Doctor </a></li>
+                </ul>
+            </li>
+        </ul>
+        &nbsp;&emsp;&nbsp;
+        <ul class="no-bullets">
+            <li>
+                <p>Signup</p>
+                <ul class="no-bullets">
+                    <li class="loginList"><a (click)="addPatient()" class="loginhover"> As Patient </a></li>
+                    <li class="loginList"><a (click)="addDoctor()" class="loginhover"> As Doctor </a></li>
+                </ul>
+            </li>
+        </ul>
+
+        &nbsp;&emsp;&nbsp;
+        <a href="#services" class="navtext">Service</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="#about" class="navtext">About</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="#contact" class="navtext">Contact</a>
+        &nbsp;&emsp;&nbsp;
+        <a href="https://www.cowin.gov.in/" target="_blank"><button class="vaccine">Click Here for
+                Vaccination</button></a>
+    </div>
+</div>
+<br />
+<h2 class="welcomeh2">Patient Registration</h2>
+<br>
+<div class="container">
+
+    <form [formGroup]="patientForm" (ngSubmit)="savePatient()">
+        <fieldset>
+            <div class="form-group row">
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+
+                        <label for="patientId">Patient Id </label>
+                        <input type="number" class="form-control" name="patientId" id="patientId"
+                            formControlName="patientId" [readonly]="patientId!=-1 ? true :false">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientId').hasError('required') && patientForm.get('patientId').dirty">
+                            Patient Id is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientId').hasError('min') && patientForm.get('patientId').dirty">
+                            Patient Id can't be Stored
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" class="form-control" name="patientName" id="patientName"
+                            formControlName="patientName">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientName').hasError('required') && patientForm.get('patientName').dirty">
+                            Patient name is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientName').hasError('minlength') && patientForm.get('patientName').dirty">
+                            Patient name must be of 3 characters
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+
+                        <label for="patientContact">Patient Contact </label>
+                        <input type="text" name="patientContact" id="patientContact" class="form-control"
+                            formControlName="patientContact">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientContact').hasError('required') && patientForm.get('patientContact').dirty">
+                            Patient Contact is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientContact').hasError('minlength') && patientForm.get('patientContact').dirty">
+                            Patient Contact must be of 10 characters
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientContact').hasError('maxlength') && patientForm.get('patientContact').dirty">
+                            Patient Contact must be of 10 characters
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+
+                        <label for="patientAddress">Patient Address </label>
+                        <input type="text" name="patientAddress" id="patientAddress" class="form-control"
+                            formControlName="patientAddress">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientAddress').hasError('required') && patientForm.get('patientAddress').dirty">
+                            Patient Address is required
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label>
+                            Male<input [(ngModel)] = "answer" type="radio" value="Male" class="form-control"  formControlName="patientGender"/>
+                        </label>&nbsp;&nbsp;
+                        <label>
+                           Female <input [(ngModel)] = "answer" type="radio" value="Female" class="form-control"  formControlName="patientGender"/>
+                        </label>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientGender').hasError('required') && patientForm.get('patientGender').dirty">
+                            Patient Gender is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+
+                        <label for="patientAge">Patient Age </label>
+                        <input type="number" class="form-control" name="patientAge" id="patientAge"
+                            formControlName="patientAge">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientAge').hasError('required') && patientForm.get('patientAge').dirty">
+                            Patient Age is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientAge').hasError('min') && patientForm.get('patientAge').dirty">
+                            Patient Age can't be Stored
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label for="patientGuardian">Patient Gaurdian </label>
+
+                        <input type="text" class="form-control" name="patientGuardian" id="patientGuardian"
+                            formControlName="patientGaurdian">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientGaurdian').hasError('required') && patientForm.get('patientGaurdian').dirty">
+                            Patient Gaurdian name is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientGaurdian').hasError('minlength') && patientForm.get('patientGaurdian').dirty">
+                            Patient Gaurdian name must be of 3 characters
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label>Gaurdian Contact </label>
+
+                        <input type="text" class="form-control" formControlName="gaurdianContact">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('gaurdianContact').hasError('required') && patientForm.get('gaurdianContact').dirty">
+                            Gaurdian Contact is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('gaurdianContact').hasError('minlength') && patientForm.get('gaurdianContact').dirty">
+                            Gaurdian Contact must be of 10 characters
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('gaurdianContact').hasError('maxlength') && patientForm.get('gaurdianContact').dirty">
+                            Gaurdian Contact must be of 10 characters
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group col-md-5 col-mb-6"></div>
+                <div class="form-group col-md-5 col-mb-6">
+                    <div class="form-group">
+                        <label>Patient Password </label>
+
+                        <input type="password" class="form-control" formControlName="patientPassword">
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientPassword').hasError('minlength') && patientForm.get('patientPassword').dirty">
+                            Password must be of 8 characters
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientPassword').hasError('required') && patientForm.get('patientPassword').dirty">
+                            Password is required
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="patientForm.get('patientPassword').hasError('pattern') && patientForm.get('patientPassword').dirty">
+                            Passowrd Does not Match requirement
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group row">
+            <div class="form-group col-md-5 col-mb-6"></div>
+            <div class="form-group col-md-5 buttons" align=center>
+                <button type="submit" class="btn-lg btn-success" [disabled]="patientForm.invalid">{{patientId ==-1 ?
+                    "Add":"Edit"}}
+                    Patient</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="reset" class="btn-lg btn-info">Clear</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer class="copyfooter">&copy; 2021 Healthcare | All Rights Reserved</footer>
