@@ -1,4 +1,7 @@
 # Patient On Boarding
+##Home page
+![PatiendOnBoardHome](https://user-images.githubusercontent.com/52285629/148494628-8627261c-ed3a-4c8c-a956-33a50c196887.jpg)
+
 ## Project Description
 The Patient On Boarding Application is a web-based application that allow patients to submit and update patient information and store it securely making on-boarding faster and reliable.This Project is based on Single-Page Application using Angular and SpringBoot Framework where we can easily manipulate to our data and managing will be very easy.This project was generated with Angular CLI version 12.2.0.
 Allows patients to submit and update patient information and store it securely making on- boarding faster and reliable.Define the desired capabilities (i.e. requirements) of this portal. The requirements should be ideally expressed from the perspective of a patient who wants to visit the hospital/clinic for consultation and/or procedure.You can choose a general practitioner or dental practice or eye clinic or any other.Patient onboarding regulations should be researched and built into the application.
