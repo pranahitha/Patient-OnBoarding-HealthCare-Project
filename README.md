@@ -37,9 +37,3 @@ To get more help on the Angular CLI use ng help or go check out the Angular CLI 
 - After Signing in a Patient wuld be able to book an appointment for the Consultant for his problem with Doctor.
 - Doctor Module will able to manage and deny the appiontment.
 
-## Contributors
-* Akshat Nagar
-* Anuradha Mishra
-* Deekshit Srihari
-* Jadala Pranahitha
-* Jayant Chaurasiya
